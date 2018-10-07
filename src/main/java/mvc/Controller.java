@@ -20,6 +20,11 @@ public class Controller {
         View.printMsg(HELLO + " " + WORLD + " : " + model.getHello() + " " + model.getWorld());
     }
 
+    /**
+     *
+     * @param word
+     * @return
+     */
     private String processWord(String word) {
         String inputStr;
         do {
@@ -27,18 +32,11 @@ public class Controller {
             do {                            // to skip empty lines //
                 inputStr = Reader.getString();
             } while (inputStr.equals(""));
-            if (validateInput(inputStr, word)) {
+            if (model.validateInput(inputStr, word)) {
                 View.printMsg(View.ERROR_MSG + "\"" + inputStr + "\"");
             }
-        } while (validateInput(inputStr, word));
+        } while (model.validateInput(inputStr, word));
         return inputStr;
     }
 
-    private boolean validateInput(String inputStr, String compereStr) {
-        boolean validate = false;
-        if (!inputStr.trim().equalsIgnoreCase(compereStr)) {
-            validate = true;
-        }
-        return validate;
-    }
 }

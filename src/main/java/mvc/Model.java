@@ -21,26 +21,12 @@ class Model {
     String getWorld() {
         return world;
     }
-//
-//    private boolean validateInput(String inputStr, String compereStr) {
-//        boolean validate = false;
-//        if (!inputStr.trim().equalsIgnoreCase(compereStr)) {
-//            validate = true;
-//        }
-//        return validate;
-//    }
-//
-//    private String processWord(String word) {
-//        String inputStr;
-//        do {
-//            View.printMsg(View.ENTER_MSG + "\"" + word + "\"");
-//            do {                            // to skip empty lines //
-//                inputStr = Reader.getString();
-//            } while (inputStr.equals(""));
-//            if (validateInput(inputStr, word)) {
-//                View.printMsg(View.ERROR_MSG + "\"" + inputStr + "\"");
-//            }
-//        } while (validateInput(inputStr, word));
-//        return inputStr;
-//    }
+
+    boolean validateInput(String inputStr, String compereStr) {
+        boolean validate = false;
+        if (!inputStr.trim().equalsIgnoreCase(compereStr)) {
+            validate = true;
+        }
+        return validate;
+    }
 }
