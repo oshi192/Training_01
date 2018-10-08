@@ -23,7 +23,7 @@ public class Controller {
     /**
      * reads a string until it's valid (or correct)
      * @param word - string to compare for validity
-     * @return entered strins
+     * @return entered strings
      */
     private String processWord(String word) {
         String inputStr;
@@ -32,10 +32,10 @@ public class Controller {
             do {                            // to skip empty lines //
                 inputStr = Reader.getString();
             } while (inputStr.equals(""));
-            if (model.validateInput(inputStr, word)) {
+            if (!model.validateInput(inputStr, word)) {
                 View.printMsg(View.ERROR_MSG + "\"" + inputStr + "\"");
             }
-        } while (model.validateInput(inputStr, word));
+        } while (!model.validateInput(inputStr, word));
         return inputStr;
     }
 

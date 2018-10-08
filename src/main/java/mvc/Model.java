@@ -1,6 +1,6 @@
 package mvc;
 
-class Model {
+public class Model {
     private String hello;
     private String world;
 
@@ -26,9 +26,9 @@ class Model {
      * @param compereStr - second
      * @return true if equals
      */
-    boolean validateInput(String inputStr, String compereStr) {
+    public boolean validateInput(String inputStr, String compereStr) {
         boolean validate = false;
-        if (!inputStr.trim().equalsIgnoreCase(compereStr)) {
+        if (inputStr.trim().equalsIgnoreCase(compereStr)) {
             validate = true;
         }
         return validate;
