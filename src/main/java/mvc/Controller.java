@@ -21,9 +21,9 @@ public class Controller {
     }
 
     /**
-     *
-     * @param word
-     * @return
+     * reads a string until it's valid (or correct)
+     * @param word - string to compare for validity
+     * @return entered strins
      */
     private String processWord(String word) {
         String inputStr;

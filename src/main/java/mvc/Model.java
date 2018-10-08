@@ -1,7 +1,5 @@
 package mvc;
 
-import util.Reader;
-
 class Model {
     private String hello;
     private String world;
@@ -22,6 +20,12 @@ class Model {
         return world;
     }
 
+    /**
+     * compares 2 Strings with ignorecase
+     * @param inputStr - 1st strting
+     * @param compereStr - second
+     * @return true if equals
+     */
     boolean validateInput(String inputStr, String compereStr) {
         boolean validate = false;
         if (!inputStr.trim().equalsIgnoreCase(compereStr)) {
